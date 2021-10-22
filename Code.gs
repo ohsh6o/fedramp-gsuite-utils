@@ -1,3 +1,9 @@
+function run(){
+  var config = new MapperConfig(debugMode=true);
+  var mapper = new Mapper(config);
+  mapper.handler();
+};
+
 var MapperLogger = function(debugMode) {
   this.debugMode = debugMode || false;
 
@@ -58,35 +64,6 @@ var MapperConfig = function(
 var Mapper = function(config) {
   this.config = config || new MapperConfig();
   this.logger = new MapperLogger(this.config.debugMode);
-
-  // this.findFile = function(folderId, fileName) {
-  //   if(!folderId) {
-  //     this.logger.err('No folder ID');
-  //     return false;
-  //   }
-
-  //   if(!fileName) {
-  //     this.logger.err('No fileName')
-  //     return null;
-  //   }
-
-  //   var folder = DriveApp.getFolderById(folderId);
-
-  //   if(!folder.hasNext()) {
-  //     this.logger.warn('Bad folder ID');
-  //     return null;
-  //   }
-
-  //   var doc = folder.next().getFilesByName(fileName);
-
-  //   if(!doc.hasNext()) {
-  //     this.logger.debug('Ok folder ID, but bad file name');
-  //     return null;
-  //   }
-
-  //   this.logger.info('Found file')
-  //   return doc.hasNext();
-  // };
 
   this.pickExistingFile = function(folderId, fileName) {
     if(!folderId) {
@@ -179,11 +156,4 @@ var Mapper = function(config) {
       }
     }
   };
-};
-
-
-function run(){
-  var config = new MapperConfig(debugMode=true);
-  var mapper = new Mapper(config);
-  mapper.handler();
 };
