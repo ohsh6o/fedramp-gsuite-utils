@@ -22,5 +22,16 @@ This prototype repository contains a collection of Google Apps Script functions 
 - [ ] The author will operate the `run` function with a special parameter, indicating the mapping paths are loaded; the script will create an updated OSCAL XML SSP document instance will all data inserted.
 
 # Installation and Configuration
+
+## Installation
+
 1. Load the script into the relevant converted Google Doc system security plan.
 2. Enable [advanced API services](https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services) to use special advanced API functions or the script will fail.
+
+## Configuration
+
+To disable debug logging, in the main configuration, remote `debugMode` parameter or set `debugMode=false`. The script, [as written now](https://github.com/ohsh6o/fedramp-gsuite-utils/blob/d1da3eea963ca5bb613dfb1e629a6c32bf7493ea/Code.gs#L2), automatically runs with debug mode on, and will log information than usual to the console.
+
+# Credits
+
+Hat tip to @rpalmer-gsa for a brilliant idea and @pburkholder for encouraging and supporting it.
