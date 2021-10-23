@@ -34,4 +34,4 @@ To disable debug logging, in the main configuration, remote `debugMode` paramete
 
 # Credits
 
-Hat tip to @rpalmer-gsa for a brilliant idea and @pburkholder for encouraging and supporting it.
+Hat tip to [@rpalmer-gsa](https://github.com/rpalmer-gsa) for a brilliant idea and [@pburkholder](https://github.com/pburkholder) for encouraging and supporting it.
